@@ -23,10 +23,10 @@ router.get('/apartment', async(req,res)=>{
         res.json(jsonResponse(err.message,false));
     }
 })
-router.get('/allApart/:items', async(req,res)=>{
+router.get('/allApart', async(req,res)=>{
     try{
        
-        const result = await apartmentController.getAllApartments(req.params);
+        const result = await apartmentController.getAllApartments();
         res.json(jsonResponse(result));
 
     }catch(err){

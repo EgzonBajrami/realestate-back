@@ -8,6 +8,7 @@ var usersRouter = require('./routes/users');
 const apartmentRoutes = require('./routes/apartment.routes.js')
 const houseRoutes = require('./routes/house.routes.js')
 const propertyRoutes = require('./routes/property.routes')
+const lokaleRoutes = require('./routes/lokale.routes');
 
 var app = express();
 const cors = require('cors');
@@ -25,4 +26,5 @@ app.use('/users', usersRouter);
 app.use('/apartment', apartmentRoutes);
 app.use('/house',houseRoutes)
 app.use('/property',propertyRoutes);
+app.use('/lokale',lokaleRoutes);
 module.exports = app;
